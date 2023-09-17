@@ -57,13 +57,7 @@ function getTriangle(sideA, sideB, sideC) {
         area = area.toFixed(3);
         let currentArea = parseFloat(area);
 
-        let triangle = {
-            sideA,
-            sideB,
-            sideC
-        };
-
-        return triangle;
+        return new Triangle(sideA, sideB, sideC);
         return {
             get area() {
                 return isNaN(area) ? 'Ошибка! Треугольник не существует' : currentArea;

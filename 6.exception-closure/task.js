@@ -7,10 +7,9 @@
 
 function validateCount(count) {
     try {
-        return parseCount(count)
-    }
-    catch (error) {
-        console.log(error);
+        return parseCount(count);
+    } catch (error) {
+        return error;
     }
 }
 

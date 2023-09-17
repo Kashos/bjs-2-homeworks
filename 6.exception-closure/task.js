@@ -8,7 +8,8 @@
 function validateCount(count) {
     try {
         return parseCount(count)
-    } catch (error) {
+    }
+    catch (error) {
         console.log(error);
     }
 }
@@ -56,6 +57,13 @@ function getTriangle(sideA, sideB, sideC) {
         area = area.toFixed(3);
         let currentArea = parseFloat(area);
 
+        let triangle = {
+            sideA,
+            sideB,
+            sideC
+        };
+
+        return triangle;
         return {
             get area() {
                 return isNaN(area) ? 'Ошибка! Треугольник не существует' : currentArea;

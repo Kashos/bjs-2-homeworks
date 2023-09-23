@@ -6,12 +6,12 @@ class AlarmClock {
 
     addClock(time, callback) {
         if (!time || !callback) {
-            throw new Error("Отсутствуют обязательные аргументы");
+            throw new Error('РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ Р°СЂРіСѓРјРµРЅС‚С‹');
         }
 
         const existingAlarm = this.alarmCollection.find(alarm => alarm.time === time);
         if (existingAlarm) {
-            console.warn("Уже присутствует звонок на это же время");
+            console.warn('РЈР¶Рµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ Р·РІРѕРЅРѕРє РЅР° СЌС‚Рѕ Р¶Рµ РІСЂРµРјСЏ');
         }
 
         const newAlarm = {
@@ -24,7 +24,7 @@ class AlarmClock {
 
     removeClock(time) {
         if (!this.alarmCollection) {
-            console.error("Коллекция звонков отсутствует!");
+            console.error('РљРѕР»Р»РµРєС†РёСЏ Р·РІРѕРЅРєРѕРІ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!');
             return;
         }
 
@@ -70,7 +70,7 @@ class AlarmClock {
 
     resetAllCalls() {
         if (!this.alarmCollection) {
-            console.error("Коллекция звонков отсутствует!");
+            console.error('РљРѕР»Р»РµРєС†РёСЏ Р·РІРѕРЅРєРѕРІ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚!');
             return;
         }
 

@@ -6,12 +6,12 @@ class AlarmClock {
 
     addClock(time, callback) {
         if (!time || !callback) {
-            throw new Error('Отсутствуют обязательные аргументы');
+            throw new Error("Отсутствуют обязательные аргументы");
         }
 
         const existingAlarm = this.alarmCollection.find(alarm => alarm.time === time);
         if (existingAlarm) {
-            console.warn('Уже присутствует звонок на это же время');
+            console.warn("Уже присутствует звонок на это же время");
         }
 
         const newAlarm = {
@@ -24,7 +24,7 @@ class AlarmClock {
 
     removeClock(time) {
         if (!this.alarmCollection) {
-            console.error('Коллекция звонков отсутствует!');
+            console.error("Коллекция звонков отсутствует!");
             return;
         }
 
@@ -33,8 +33,8 @@ class AlarmClock {
 
     getCurrentFormattedTime() {
         const currentDate = new Date();
-        const hours = String(currentDate.getHours()).padStart(2, '0');
-        const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+        const hours = String(currentDate.getHours()).padStart(2, "0");
+        const minutes = String(currentDate.getMinutes()).padStart(2, "0");
         return `${hours}:${minutes}`;
     }
 
@@ -70,7 +70,7 @@ class AlarmClock {
 
     resetAllCalls() {
         if (!this.alarmCollection) {
-            console.error('Коллекция звонков отсутствует!');
+            console.error("Коллекция звонков отсутствует!");
             return;
         }
 
